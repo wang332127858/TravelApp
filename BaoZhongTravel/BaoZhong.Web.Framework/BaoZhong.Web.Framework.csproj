@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{231D742F-CBA9-4516-82D3-399E8E54F2B6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BaoZhong.Web.Framework</RootNamespace>
+    <AssemblyName>BaoZhong.Web.Framework</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\BaoZhongTravel\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Mvc, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaoZhong.Web.Framework\ActionPermission.cs" />
+    <Compile Include="BaoZhong.Web.Framework\AdminPermission.cs" />
+    <Compile Include="BaoZhong.Web.Framework\AreaRegistrationOrder.cs" />
+    <Compile Include="BaoZhong.Web.Framework\BaseAdminController.cs" />
+    <Compile Include="BaoZhong.Web.Framework\BaseController.cs" />
+    <Compile Include="BaoZhong.Web.Framework\EnumVisitorOperaSystem.cs" />
+    <Compile Include="BaoZhong.Web.Framework\EnumVisitorTerminal.cs" />
+    <Compile Include="BaoZhong.Web.Framework\GZipAttribute.cs" />
+    <Compile Include="BaoZhong.Web.Framework\JumpUrlRoute.cs" />
+    <Compile Include="BaoZhong.Web.Framework\NoCompress.cs" />
+    <Compile Include="BaoZhong.Web.Framework\PrivilegeHelper.cs" />
+    <Compile Include="BaoZhong.Web.Framework\SiteStaticInfo.cs" />
+    <Compile Include="BaoZhong.Web.Framework\UnAuthorize.cs" />
+    <Compile Include="BaoZhong.Web.Framework\UserCookieEncryptHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="BaoZhong.Web.Framework\VisitorTerminal.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BaoZhong.Core\BaoZhong.Core.csproj">
+      <Project>{367753fc-d41e-4d96-aea6-0cdb5ad4b174}</Project>
+      <Name>BaoZhong.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BaoZhong.IServices\BaoZhong.IServices.csproj">
+      <Project>{eec920fa-1286-47f8-bc41-6d949285c55a}</Project>
+      <Name>BaoZhong.IServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BaoZhong.Model\BaoZhong.Model.csproj">
+      <Project>{29753f37-3b43-4eec-9110-f0a3238c3b58}</Project>
+      <Name>BaoZhong.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BaoZhong.ServiceProvider\BaoZhong.ServiceProvider.csproj">
+      <Project>{1352aa71-4494-476f-84fe-c10b0a86f5db}</Project>
+      <Name>BaoZhong.ServiceProvider</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

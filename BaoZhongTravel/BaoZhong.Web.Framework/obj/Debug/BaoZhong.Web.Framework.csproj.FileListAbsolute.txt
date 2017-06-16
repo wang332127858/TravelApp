@@ -1,0 +1,5 @@
+G:\Office\外包\宝中旅游\Code\BaoZhongTravel\BaoZhong.Web.Framework\obj\Debug\BaoZhong.Web.Framework.csprojResolveAssemblyReference.cache
+G:\Office\外包\宝中旅游\Code\BaoZhongTravel\BaoZhongTravel\bin\BaoZhong.Web.Framework.dll
+G:\Office\外包\宝中旅游\Code\BaoZhongTravel\BaoZhongTravel\bin\BaoZhong.Web.Framework.pdb
+G:\Office\外包\宝中旅游\Code\BaoZhongTravel\BaoZhong.Web.Framework\obj\Debug\BaoZhong.Web.Framework.dll
+G:\Office\外包\宝中旅游\Code\BaoZhongTravel\BaoZhong.Web.Framework\obj\Debug\BaoZhong.Web.Framework.pdb
