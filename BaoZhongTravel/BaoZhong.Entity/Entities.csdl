@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BZ.Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="BZ_Managers" EntityType="BZ.Model.ManagerInfo" />
+    <EntitySet Name="BZ_RolePrivileges" EntityType="BZ.Model.RolePrivilegeInfo" />
+    <EntitySet Name="BZ_Roles" EntityType="BZ.Model.RoleInfo" />
+  </EntityContainer>
+  <EnumType Name="EnumCommentKey" a:ExternalTypeName="StatisticOrderCommentsInfo.EnumCommentKey" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" />
+  <EnumType Name="CompanyEmployeeCount" a:ExternalTypeName="CompanyEmployeeCount" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" />
+  <EnumType Name="ShopAuditStatus" a:ExternalTypeName="ShopInfo.ShopAuditStatus" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" />
+  <EnumType Name="ProductSaleStatus" a:ExternalTypeName="ProductInfo.ProductSaleStatus" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" />
+  <EnumType Name="ProductAuditStatus" a:ExternalTypeName="ProductInfo.ProductAuditStatus" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" />
+  <EnumType Name="SexType" a:ExternalTypeName="UserMemberInfo.SexType" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" />
+  <EnumType Name="OrderOperateStatus" a:ExternalTypeName="OrderInfo.OrderOperateStatus" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" />
+  <EnumType Name="OrderActiveTypes" a:ExternalTypeName="OrderInfo.ActiveTypes" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" />
+  <EnumType Name="ActiveTypes" a:ExternalTypeName="OrderInfo.ActiveTypes" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" />
+  <EnumType Name="InvoiceType" a:ExternalTypeName="InvoiceType" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" />
+  <EnumType Name="SlideAdType" a:ExternalTypeName="SlideAdType" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" />
+  <EnumType Name="ComplaintStatus" a:ExternalTypeName="OrderComplaintInfo.ComplaintStatus" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" />
+  <EnumType Name="CapitalDetailType" a:ExternalTypeName="UserCapitalDetail.CapitalDetailType" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" />
+  <EnumType Name="IntegralType" a:ExternalTypeName="MemberIntegral.IntegralType" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" />
+  <EnumType Name="VirtualItemType" a:ExternalTypeName="MemberIntegral.VirtualItemType" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" />
+  <EnumType Name="ChargeDetailStatus" a:ExternalTypeName="Model.ChargeDetailInfo.ChargeDetailStatus" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" />
+
+  <EntityType Name="ManagerInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ShopId" Type="Int64" Nullable="false" />
+    <Property Name="RoleId" Type="Int64" Nullable="false" />
+    <Property Name="GroupId" Type="Int64" Nullable="false" />
+    <Property Name="ParentId" Type="Int64" Nullable="false" />
+    <Property Name="ParentName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PasswordSalt" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Remark" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="RealName" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="IsLogin" Type="Int32" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="BankAccountName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="BankAccountNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="RolePrivilegeInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Privilege" Type="Int32" Nullable="false" />
+    <Property Name="RoleId" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RoleInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ShopId" Type="Int64" Nullable="false" />
+    <Property Name="RoleName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

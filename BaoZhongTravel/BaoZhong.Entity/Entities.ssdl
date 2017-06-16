@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BZ.Model.Store" Provider="BZ.Data.MySqlClient" ProviderManifestToken="5.6" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="BZ_Managers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ShopId" Type="bigint" Nullable="false" />
+    <Property Name="RoleId" Type="bigint" Nullable="false" />
+    <Property Name="GroupId" Type="bigint" Nullable="false" />
+    <Property Name="ParentId" Type="bigint" Nullable="false" />
+    <Property Name="ParentName" Type="varchar" MaxLength="100"/>
+    <Property Name="UserName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="PasswordSalt" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Remark" Type="varchar" MaxLength="1000" />
+    <Property Name="RealName" Type="varchar" MaxLength="1000" />
+    <Property Name="IsLogin" Type="int" Nullable="false" />
+    <Property Name="Address" Type="varchar" MaxLength="100" />
+    <Property Name="Phone" Type="varchar" MaxLength="100" />
+    <Property Name="BankAccountName" Type="varchar" MaxLength="100" />
+    <Property Name="BankAccountNumber" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="BZ_RolePrivileges">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Privilege" Type="int" Nullable="false" />
+    <Property Name="RoleId" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BZ_Roles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ShopId" Type="bigint" Nullable="false" />
+    <Property Name="RoleName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="1000" Nullable="false" />
+  </EntityType>
+</Schema>
