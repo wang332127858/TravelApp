@@ -1,0 +1,298 @@
+﻿<!DOCTYPE html>
+@{
+    Layout = null;
+}
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit|ie-stand">
+    <meta name="viewport" content="width=device-width" />
+    <title>PC平台中心</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/artdialog.css" rel="stylesheet" />
+    <link href="~/Content/custom.css" rel="stylesheet" />
+
+    <style>
+        .aside, .content {
+            top: 51px;
+        }
+
+        .block {
+            width: 64px;
+            height: 1px;
+            background: #e3393c;
+            position: absolute;
+            bottom: 1px;
+            z-index: 9999;
+            transition: left 0.3s ease;
+        }
+
+        .navbar-right li:before {
+            content: "|";
+            color: #565556;
+            font-size: 12px;
+            position: relative;
+            top: 17px;
+            float: left;
+        }
+    </style>
+
+</head>
+<body>
+    @*@{var area = (string)ViewContext.RouteData.DataTokens["area"];}*@
+    <div class="navbar navbar-static-top navbar-custom">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="logo" href="/" title=""></a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-left">
+                    <div class="block"></div>
+                    <li class="dropdown active L_curr">
+                        <a class="dropdown-toggle dropdown" data-toggle="dropdown">首页</a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("控制台", "Console", "Home", new { area = "admin" }, new { target = "iframe", id = "1001" })</li>
+                        </ul>
+                    </li>
+                    @*@foreach (var p in BaoZhong.Web.Framework.PrivilegeHelper.AdminPrivileges.Privilege)
+                    {
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown">@p.GroupName</a>
+                            <ul class="dropdown-menu id_menu">
+                                @foreach (var item in p.Items)
+                                {
+                                    <li><a href="/@item.Url" id="@item.PrivilegeId" target="iframe">@item.Name</a></li>
+                                }
+                            </ul>
+                        </li>
+                    }*@
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="javascript:change()" style="float:left;">修改密码</a></li>
+                    <li><a href="javascript:logout()" style="float:left;">安全退出</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="aside">
+        <div class="column-icon"><i></i></div>
+        <ul class="aside-list"></ul>
+    </div>
+    <div class="content">
+        <iframe id="iframe" name="iframe" frameborder="0" scrolling="auto"></iframe>
+    </div>
+
+    <script src="~/Scripts/jquery-1.7.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="/Scripts/respond.min.js"></script>
+    <![endif]-->
+    <script src="~/Scripts/custom.js"></script>
+    <script src="~/Scripts/CommonJS.js"></script>
+    <script src="~/Scripts/jquery.cookie.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('.content,.aside').height($(window).height() - 71);
+            $(window).resize(function () {
+                $('.content,.aside').height($(window).height() - 71);
+            });
+        });
+
+        var _getElementById = function (tagName) {
+            return window.frames[0].document.getElementById(tagName);
+        };
+        function change() {
+            var stae1, stae2, stae3;
+            window.frames[0].$.dialog({
+                title: '修改密码',
+                lock: true,
+                id: 'ChangePwd',
+                width: '400px',
+                content: '<div id="changePassword" style="">\
+        <div class="dialog-form">\
+                <div class="form-group">\
+                    <label for="" class="label-inline">旧密码：</label>\
+                    <input type="password" value="" id="old"  name="userVo.realName" maxlength="20" class="form-control input-sm">\
+                    <p id="old_msg" class="help-block"></p>\
+                </div>\
+                <div class="form-group">\
+                    <label for="" class="label-inline">新密码：</label>\
+                    <input type="password" value="" id="new" name="userVo.realName" maxlength="20" class="form-control input-sm">\
+                    <p id="new_msg" class="help-block"></p>\
+                </div>\
+                <div class="form-group">\
+                    <label for="" class="label-inline">重复密码：</label>\
+                    <input type="password" value="" id="confirm" name="userVo.realName" maxlength="20" class="form-control input-sm">\
+                    <p class="help-block" id="confirm_msg" ></p>\
+                </div>\
+        </div>\
+    </div>',
+                padding: '0 40px',
+                okVal: '确定',
+                init: function () {
+
+
+
+                    //console.log(_getElementById);
+                    $(_getElementById("old")).focus();
+
+                    fn = function (dom, d, callback, msg) {
+                        $.ajax({
+                            type: 'post',
+                            url: '@Url.Action("CheckOldPassword")',
+                            data: 'password=' + d,
+                            dataType: "json",
+                            success: function (data) {
+                                if (!data.success) {
+                                    callback(dom, data.success, msg, d);
+                                } else {
+                                    $(_getElementById('old_msg')).html('');
+                                    $(_getElementById("old")).css({ borderColor: '#ccc' });
+                                    stae1 = $(_getElementById(dom)).val();
+                                }
+                            }
+                        });
+                    },
+                    handle = function (dom, data, msg, d) {
+                        if (data) {
+                            stae1 = $(_getElementById(dom)).val();
+                        } else {
+                            $(_getElementById(dom)).css({ borderColor: '#f60' });
+                            $(_getElementById(dom + '_msg')).css({ color: '#f60' }).html(msg);
+                            stae1 = '';
+                        }
+                    };
+
+                    $(_getElementById("old")).blur(function () {
+                        //alert();
+                        var d = $(this).val();
+                        fn('old', d, handle, '密码错误!');
+                    });
+                    $(_getElementById('new')).blur(function () {
+                        var d = $(this).val();
+                        if (d.length < 6) {
+                            $(_getElementById('new')).css({ borderColor: '#f60' });
+                            $(_getElementById('new_msg')).css({ color: '#f60' }).html('密码不能少于6位!');
+                            stae2 = '';
+                        } else {
+                            $(_getElementById('new')).css({ borderColor: '#ccc' });
+                            $(_getElementById('new_msg')).css({ color: '#ccc' }).html('');
+                            stae2 = d;
+                        }
+                    });
+                    $(_getElementById('confirm')).blur(function () {
+                        var d = $(this).val();
+                        if (d == $(_getElementById('new')).val()) {
+                            $(_getElementById('confirm')).css({ borderColor: '#ccc' });
+                            $(_getElementById('confirm_msg')).css({ color: '#ccc' }).html('');
+                            stae3 = d;
+                        } else {
+                            $(_getElementById('confirm')).css({ borderColor: '#f60' });
+                            $(_getElementById('confirm_msg')).css({ color: '#f60' }).html('密码不一致!');
+                            stae3 = '';
+                        }
+                    });
+                },
+                button: [
+                    {
+                        name: '确认',
+                        callback: function () {
+                            var loading = showLoading();
+                            $.ajax({
+                                type: 'post',
+                                url: '@Url.Action("ChangePassword")',
+                                data: { "oldpassword": stae1, "password": stae3 },
+                                dataType: "json",
+                                success: function (data) {
+                                    loading.close();
+                                    if (data.success) {
+                                        window.frames[0].$.dialog.succeedTips("密码修改成功！", function () {
+                                            $(_getElementById("old")).val('');
+                                            $(_getElementById("new")).val('');
+                                            $(_getElementById("confirm")).val('');
+                                            $(_getElementById("ChangePwd")).hide();
+                                            $(_getElementById("changePassword")).hide();
+                                        }, 2);
+                                        logout();
+                                    } else {
+                                        window.frames[0].$.dialog.errorTips("保存失败！", '', 3);
+                                    }
+                                }
+                            });
+                        },
+                        focus: true
+                    },
+                    {
+                        name: '取消',
+                    }]
+            });
+        }
+
+        function logout() {
+            $.removeCookie('BaoZhong-PlatformManager', { path: '/' });
+            location.reload();
+        }
+
+        //function update() {
+        //    //console.log(location);
+        //    $.ajax({
+        //        type: 'GET',
+        //        url: '/admin/home/GetPlatfromMessage',
+        //        cache: false,
+        //        data: {},
+        //        dataType: 'json',
+        //        success: function (data) {
+        //            $("#ProductWaitForAuditing").text(data.ProductWaitForAuditing == 0 ? "" : "(" + data.ProductWaitForAuditing + ")");
+        //            $("#ShopWaitAudit").text(data.ShopWaitAudit == 0 ? "" : "(" + data.ShopWaitAudit + ")");
+        //            $("#BrandAudit").text(data.BrandAudit == 0 ? "" : "(" + data.BrandAudit + ")");
+        //            $("#ComplaintDispute").text(data.ComplaintDispute == 0 ? "" : "(" + data.ComplaintDispute + ")");
+        //            $("#RefundWaitAudit").text(data.RefundWaitAudit == 0 ? "" : "(" + data.RefundWaitAudit + ")");
+
+        //            var dis = 0;
+        //            if ($("#ProductWaitForAuditing").length == 0) dis += data.ProductWaitForAuditing;
+        //            if ($("#ShopWaitAudit").length == 0) dis += data.ShopWaitAudit;
+        //            if ($("#BrandAudit").length == 0) dis += data.BrandAudit;
+        //            if ($("#ComplaintDispute").length == 0) dis += data.ComplaintDispute;
+        //            if ($("#RefundWaitAudit").length == 0) dis += data.RefundWaitAudit;
+        //            $("#AllMessageCount").text(data.AllMessageCount - dis);
+
+        //        },
+        //        error: function () { }
+        //    });
+        //}
+
+        //note 2017/6/15 cgm
+        @*(function () {
+            var arr = "@ViewBag.Rights".split(','),
+            obj = {};
+            if (arr[0] == 0) {
+                //   update();
+                // setInterval(update, 60 * 1000);
+                return;
+            }
+            ; (function (a, o) {
+                $.each(a, function (i, e) {
+                    o[e] = true;
+                });
+            }(arr, obj));
+            $('.id_menu').each(function (i, e) {
+                var num = $(e).children().length,
+                    uid = 0;
+                $(e).children().each(function (n, o) {
+                    var a = $(o).find('a').attr('id');
+                    if (!obj[a]) {
+                        $(o).remove();
+                        $('#_' + a).remove();
+                        uid += 1;
+                    }
+                    if (uid == num) {
+                        $(e).parent().remove();
+                    }
+                });
+            });
+        }());*@
+    </script>
+</body>
+
+</html>
