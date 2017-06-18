@@ -1,7 +1,7 @@
 ﻿using BaoZhong.Web.Framework;
 using System.Web.Mvc;
 
-namespace YJH.Web.Areas.Admin
+namespace BaoZhong.Web.Areas.Admin
 {
     /// <summary>
     /// desc:管理区域页面路由规则注册

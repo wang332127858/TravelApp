@@ -56,7 +56,7 @@ namespace BaoZhong.Web.Framework
 		private static IList<ActionPermission> GetAllActionByAssembly()
 		{
 			List<ActionPermission> list = new List<ActionPermission>();
-			IEnumerable<Type> enumerable = from a in Assembly.Load("YJH.Web").GetTypes()
+			IEnumerable<Type> enumerable = from a in Assembly.Load("BaoZhong.Web").GetTypes()
 			where a.BaseType != null && a.BaseType.Name == "BaseAdminController"
 			select a;
 			foreach (Type current in enumerable)
