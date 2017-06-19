@@ -43,5 +43,66 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="BZ_Members">
+      <EntityTypeMapping TypeName="BZ.Model.MemberInfo">
+        <MappingFragment StoreEntitySet="BZ_Members">
+          <ScalarProperty Name="InterestLine" ColumnName="InterestLine" />
+          <ScalarProperty Name="Profession" ColumnName="Profession" />
+          <ScalarProperty Name="Interest" ColumnName="Interest" />
+          <ScalarProperty Name="Health" ColumnName="Health" />
+          <ScalarProperty Name="Points" ColumnName="Points" />
+          <ScalarProperty Name="RegisterName" ColumnName="RegisterName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="RegionId" ColumnName="RegionId" />
+          <ScalarProperty Name="TopRegionId" ColumnName="TopRegionId" />
+          <ScalarProperty Name="RecommendUserName" ColumnName="RecommendUserName" />
+          <ScalarProperty Name="RecommendUserId" ColumnName="RecommendUserId" />
+          <ScalarProperty Name="TelePhone" ColumnName="TelePhone" />
+          <ScalarProperty Name="CellPhone" ColumnName="CellPhone" />
+          <ScalarProperty Name="PassportAddr" ColumnName="PassportAddr" />
+          <ScalarProperty Name="PassportDate" ColumnName="PassportDate" />
+          <ScalarProperty Name="PassportId" ColumnName="PassportId" />
+          <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+          <ScalarProperty Name="BornDate" ColumnName="BornDate" />
+          <ScalarProperty Name="CardId" ColumnName="CardId" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserLevel" ColumnName="UserLevel" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BZ_LevelRule">
+      <EntityTypeMapping TypeName="BZ.Model.LevelRuleInfo">
+        <MappingFragment StoreEntitySet="BZ_LevelRule">
+          <ScalarProperty Name="EndPoint" ColumnName="EndPoint" />
+          <ScalarProperty Name="BeginPoint" ColumnName="BeginPoint" />
+          <ScalarProperty Name="UserLevel" ColumnName="UserLevel" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BZ_Supplier">
+      <EntityTypeMapping TypeName="BZ.Model.SupplierInfo">
+        <MappingFragment StoreEntitySet="BZ_Supplier">
+          <ScalarProperty Name="RegionName" ColumnName="RecommendUserName" />
+          <ScalarProperty Name="RegionId" ColumnName="RecommendUserId" />
+          <ScalarProperty Name="LineName" ColumnName="TelePhone" />
+          <ScalarProperty Name="LineId" ColumnName="CellPhone" />
+          <ScalarProperty Name="TravelAddress" ColumnName="PassportAddr" />
+          <ScalarProperty Name="Remark" ColumnName="PassportDate" />
+          <ScalarProperty Name="SellerContact" ColumnName="PassportId" />
+          <ScalarProperty Name="ContactWay" ColumnName="ImageUrl" />
+          <ScalarProperty Name="SellerName" ColumnName="BornDate" />
+          <ScalarProperty Name="LeaderPhone" ColumnName="CardId" />
+          <ScalarProperty Name="LeaderName" ColumnName="Sex" />
+          <ScalarProperty Name="TravelName" ColumnName="UserName" />
+          <ScalarProperty Name="SupplierName" ColumnName="UserLevel" />
+          <ScalarProperty Name="SupplierId" ColumnName="UserId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>
