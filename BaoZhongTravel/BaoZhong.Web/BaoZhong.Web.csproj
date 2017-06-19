@@ -655,6 +655,7 @@
     <Content Include="Content\Public\plugins\ueditor\third-party\video-js\font\vjs.ttf" />
     <Content Include="Content\Public\plugins\ueditor\third-party\video-js\font\vjs.woff" />
     <Content Include="Content\PublicMob\images\huoodng%402x.zip" />
+    <Content Include="fonts\checkCode.ttf" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\chart\bar.js" />
     <Content Include="Scripts\chart\chord.js" />

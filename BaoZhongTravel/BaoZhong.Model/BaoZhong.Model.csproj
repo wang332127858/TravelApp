@@ -52,6 +52,7 @@
     <Compile Include="BaoZhong.Model\IPaltManager.cs" />
     <Compile Include="BaoZhong.Model\ISellerManager.cs" />
     <Compile Include="BaoZhong.Model\ManagerInfo.cs" />
+    <Compile Include="BaoZhong.Model\MemberInfo.cs" />
     <Compile Include="BaoZhong.Model\PageModel.cs" />
     <Compile Include="BaoZhong.Model\PrivilegeAttribute.cs" />
     <Compile Include="BaoZhong.Model\Privileges.cs" />

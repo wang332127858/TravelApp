@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaoZhong.Entity", "BaoZhong
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaoZhong.ServiceProvider", "BaoZhong.ServiceProvider\BaoZhong.ServiceProvider.csproj", "{1352AA71-4494-476F-84FE-C10B0A86F5DB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaoZhong.Strategy.AspNetCache", "BaoZhong.Strategy.AspNetCache\BaoZhong.Strategy.AspNetCache.csproj", "{AD2C644B-45CA-4C37-9148-1C1299C8CE9F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{1352AA71-4494-476F-84FE-C10B0A86F5DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1352AA71-4494-476F-84FE-C10B0A86F5DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1352AA71-4494-476F-84FE-C10B0A86F5DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD2C644B-45CA-4C37-9148-1C1299C8CE9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD2C644B-45CA-4C37-9148-1C1299C8CE9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD2C644B-45CA-4C37-9148-1C1299C8CE9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD2C644B-45CA-4C37-9148-1C1299C8CE9F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

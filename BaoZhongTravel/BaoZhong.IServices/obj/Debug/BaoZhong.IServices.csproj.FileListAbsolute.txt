@@ -1,5 +1,0 @@
-G:\Office\外包\宝中旅游\Code\BaoZhongTravel\BaoZhong.Web\bin\BaoZhong.IServices.dll
-G:\Office\外包\宝中旅游\Code\BaoZhongTravel\BaoZhong.Web\bin\BaoZhong.IServices.pdb
-G:\Office\外包\宝中旅游\Code\BaoZhongTravel\BaoZhong.IServices\obj\Debug\BaoZhong.IServices.csprojResolveAssemblyReference.cache
-G:\Office\外包\宝中旅游\Code\BaoZhongTravel\BaoZhong.IServices\obj\Debug\BaoZhong.IServices.dll
-G:\Office\外包\宝中旅游\Code\BaoZhongTravel\BaoZhong.IServices\obj\Debug\BaoZhong.IServices.pdb
