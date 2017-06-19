@@ -68,4 +68,33 @@
     <Property Name="Profession" Type="varchar" MaxLength="100"/>
     <Property Name="InterestLine" Type="varchar" MaxLength="100"/>
   </EntityType>
+  <EntityType Name="BZ_LevelRule">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserLevel" Type="int" Nullable="false" />
+    <Property Name="BeginPoint" Type="int" Nullable="false" />
+    <Property Name="EndPoint" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BZ_Supplier">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SupplierId" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="SupplierName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="TravelName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="LeaderName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="LeaderPhone" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="SellerName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="ContactWay" Type="int" Nullable="false" />
+    <Property Name="SellerContact" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Remark" Type="varchar" MaxLength="300"/>
+    <Property Name="TravelAddress" Type="varchar" MaxLength="300"/>
+    <Property Name="LineId" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="LineName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="RegionId" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="RegionName" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
 </Schema>
