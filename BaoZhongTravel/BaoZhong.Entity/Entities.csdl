@@ -4,6 +4,9 @@
     <EntitySet Name="BZ_Managers" EntityType="BZ.Model.ManagerInfo" />
     <EntitySet Name="BZ_RolePrivileges" EntityType="BZ.Model.RolePrivilegeInfo" />
     <EntitySet Name="BZ_Roles" EntityType="BZ.Model.RoleInfo" />
+    <EntitySet Name="BZ_Members" EntityType="BZ.Model.MemberInfo" />
+    <EntitySet Name="BZ_LevelRule" EntityType="BZ.Model.LevelRuleInfo" />
+    <EntitySet Name="BZ_Supplier" EntityType="BZ.Model.SupplierInfo" />
   </EntityContainer>
   <EnumType Name="EnumCommentKey" a:ExternalTypeName="StatisticOrderCommentsInfo.EnumCommentKey" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" />
   <EnumType Name="CompanyEmployeeCount" a:ExternalTypeName="CompanyEmployeeCount" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" />
@@ -60,5 +63,63 @@
     <Property Name="ShopId" Type="Int64" Nullable="false" />
     <Property Name="RoleName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="Description" Type="String" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="MemberInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="UserLevel" Type="Int64" Nullable="false" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Sex" Type="Int64"/>
+    <Property Name="CardId" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="BornDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="ImageUrl" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="PassportId" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PassportDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="PassportAddr" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CellPhone" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="TelePhone" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="RecommendUserId" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="RecommendUserName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="TopRegionId" Type="Int64" Nullable="false"/>
+    <Property Name="RegionId" Type="Int64" Nullable="false"/>
+    <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="RegisterName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Points" Type="Int64" Nullable="false"/>
+    <Property Name="Health" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Interest" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Profession" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="InterestLine" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="LevelRuleInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserLevel" Type="Int64" Nullable="false" />
+    <Property Name="BeginPoint" Type="Int64" Nullable="false"/>
+    <Property Name="EndPoint" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SupplierInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SupplierId" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="SupplierName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="TravelName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="LeaderName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="LeaderPhone" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="SellerName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" /> 
+    <Property Name="ContactWay" Type="Int64" Nullable="false" />
+    <Property Name="SellerContact" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Remark" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="TravelAddress" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="LineId" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="LineName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="RegionId" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="RegionName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
   </EntityType>
 </Schema>
