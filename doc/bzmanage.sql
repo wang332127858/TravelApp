@@ -123,3 +123,28 @@ CREATE TABLE `bz_levelrule` (
 ) ENGINE=INNODB AUTO_INCREMENT=1761 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 /*Data for the table `bz_levelrule` */
+
+/*Table structure for table `bz_supplier` */
+
+DROP TABLE IF EXISTS `bz_supplier`;
+
+CREATE TABLE `bz_supplier` (
+  `Id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `SupplierId` varchar(100) NOT NULL COMMENT '供应商Id',
+  `SupplierName` varchar(100) NOT NULL COMMENT '供应商名称',
+  `TravelName` varchar(100) NOT NULL COMMENT '旅行社名称',
+  `LeaderName` varchar(100) NOT NULL COMMENT '负责人',
+  `LeaderPhone` varchar(100) NOT NULL COMMENT '负责人电话',
+  `SellerName` varchar(100) NOT NULL COMMENT '销售联系人',
+  `ContactWay` int(11) NOT NULL COMMENT '销售联系方式：0-电话，1-微信，2-qq',
+  `SellerContact` varchar(100) NOT NULL COMMENT '销售联系方式',
+  `Remark` varchar(300) DEFAULT NULL COMMENT'备注',
+  `TravelAddress` varchar(300) DEFAULT NULL COMMENT '旅行社地址',
+  `LineId` varchar(100) NOT NULL COMMENT '线路Id',
+  `LineName` varchar(100) NOT NULL COMMENT '线路名称',
+  `RegionId` varchar(100) NOT NULL COMMENT '区域Id',
+  `RegionName` varchar(100) NOT NULL COMMENT '区域名称',
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB AUTO_INCREMENT=20170001 DEFAULT CHARSET=utf8;
+
+/*Data for the table `bz_supplier` */
