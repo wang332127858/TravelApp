@@ -73,3 +73,53 @@ CREATE TABLE `bz_roleprivileges` (
 ) ENGINE=InnoDB AUTO_INCREMENT=1761 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 /*Data for the table `bz_roleprivileges` */
+
+
+/*Table structure for table `bz_members` */
+
+DROP TABLE IF EXISTS `bz_members`;
+
+CREATE TABLE `bz_members` (
+  `Id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `UserId` varchar(100) NOT NULL COMMENT '会员卡号',
+  `UserLevel` int(11) NOT NULL COMMENT  '会员级别',
+  `UserName` varchar(100) NOT NULL COMMENT '名称',
+  `Sex` int(11) DEFAULT NULL COMMENT '性别',
+  `CardId` varchar(100) NOT NULL COMMENT '身份证号',
+  `BornDate` datetime NOT NULL COMMENT '出生日期',
+  `ImageUrl` varchar(300) DEFAULT NULL COMMENT'照片路径',
+  `PassportId` varchar(100) NOT NULL COMMENT '护照号',
+  `PassportDate` datetime NOT NULL COMMENT '护照有效期',
+  `PassportAddr` varchar(100) NOT NULL COMMENT '护照签发地',
+  `CellPhone` varchar(100) NOT NULL COMMENT '手机',
+  `TelePhone` varchar(100) NOT NULL COMMENT '固定电话',
+  `RecommendUserId` varchar(100) NOT NULL COMMENT '推荐人卡号',
+  `RecommendUserName` varchar(100) NOT NULL COMMENT '推荐人姓名',
+  `TopRegionId` int(11) NOT NULL COMMENT '省份ID',
+  `RegionId` int(11) NOT NULL COMMENT '省市区ID',
+  `Address` varchar(100) DEFAULT NULL COMMENT '街道地址',
+  `RegisterName` varchar(100) NOT NULL COMMENT '登记人姓名',
+  `Points` int(11) NOT NULL COMMENT '积分',
+  `Health` varchar(100) DEFAULT NULL COMMENT '身体情况',
+  `Interest` varchar(100) DEFAULT NULL COMMENT '爱好',
+  `Profession` varchar(100) DEFAULT NULL COMMENT '职业',
+  `InterestLine` varchar(100) DEFAULT NULL COMMENT '兴趣',
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB AUTO_INCREMENT=20170001 DEFAULT CHARSET=utf8;
+
+/*Data for the table `bz_members` */
+
+
+/*Table structure for table `bz_levelrule` */
+
+DROP TABLE IF EXISTS `bz_levelrule`;
+
+CREATE TABLE `bz_levelrule` (
+  `Id` BIGINT(20) NOT NULL AUTO_INCREMENT,
+  `UserLevel` INT(11) NOT NULL COMMENT  '会员级别',
+  `BeginPoint` INT(11) NOT NULL COMMENT '开始积分',
+  `EndPoint` INT(11) NOT NULL COMMENT '结束积分',
+  PRIMARY KEY (`Id`)
+) ENGINE=INNODB AUTO_INCREMENT=1761 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+
+/*Data for the table `bz_levelrule` */
