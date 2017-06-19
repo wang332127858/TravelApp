@@ -39,4 +39,33 @@
     <Property Name="RoleName" Type="varchar" MaxLength="100" Nullable="false" />
     <Property Name="Description" Type="varchar" MaxLength="1000" Nullable="false" />
   </EntityType>
+  <EntityType Name="BZ_Members">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="UserLevel" Type="int" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Sex" Type="int"/>
+    <Property Name="CardId" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="BornDate" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="ImageUrl" Type="varchar" MaxLength="300"/>
+    <Property Name="PassportId" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="PassportDate" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="PassportAddr" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="CellPhone" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="TelePhone" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="RecommendUserId" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="RecommendUserName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="TopRegionId" Type="int" Nullable="false" />
+    <Property Name="RegionId" Type="int" Nullable="false" />
+    <Property Name="Address" Type="varchar" MaxLength="100"/>
+    <Property Name="RegisterName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Points" Type="int" Nullable="false" />
+    <Property Name="Health" Type="varchar" MaxLength="100"/>
+    <Property Name="Interest" Type="varchar" MaxLength="100"/>
+    <Property Name="Profession" Type="varchar" MaxLength="100"/>
+    <Property Name="InterestLine" Type="varchar" MaxLength="100"/>
+  </EntityType>
 </Schema>
