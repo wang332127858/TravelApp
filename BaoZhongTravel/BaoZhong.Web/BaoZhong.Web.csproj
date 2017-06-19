@@ -1065,6 +1065,10 @@
       <Project>{ac2f5c77-38a7-4368-ba63-84284555a7f3}</Project>
       <Name>BaoZhong.Service</Name>
     </ProjectReference>
+    <ProjectReference Include="..\BaoZhong.Strategy.AspNetCache\BaoZhong.Strategy.AspNetCache.csproj">
+      <Project>{ad2c644b-45ca-4c37-9148-1c1299c8ce9f}</Project>
+      <Name>BaoZhong.Strategy.AspNetCache</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BaoZhong.Web.Framework\BaoZhong.Web.Framework.csproj">
       <Project>{231d742f-cba9-4516-82d3-399e8e54f2b6}</Project>
       <Name>BaoZhong.Web.Framework</Name>
