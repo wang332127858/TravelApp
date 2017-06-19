@@ -37,6 +37,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,14 +46,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaoZhong.Service\ManagerService.cs" />
+    <Compile Include="BaoZhong.Service\PrivilegesService.cs" />
     <Compile Include="BaoZhong.Service\ServiceBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <ProjectReference Include="..\BaoZhong.Core\BaoZhong.Core.csproj">
+      <Project>{367753fc-d41e-4d96-aea6-0cdb5ad4b174}</Project>
+      <Name>BaoZhong.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BaoZhong.Entity\BaoZhong.Entity.csproj">
       <Project>{0dcdde00-6d4b-4e75-8436-6aec42999919}</Project>
       <Name>BaoZhong.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BaoZhong.IServices\BaoZhong.IServices.csproj">
+      <Project>{eec920fa-1286-47f8-bc41-6d949285c55a}</Project>
+      <Name>BaoZhong.IServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BaoZhong.Model\BaoZhong.Model.csproj">
+      <Project>{29753f37-3b43-4eec-9110-f0a3238c3b58}</Project>
+      <Name>BaoZhong.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BaoZhong.ServiceProvider\BaoZhong.ServiceProvider.csproj">
+      <Project>{1352aa71-4494-476f-84fe-c10b0a86f5db}</Project>
+      <Name>BaoZhong.ServiceProvider</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

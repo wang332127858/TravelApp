@@ -41,14 +41,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaoZhong.IServices.QueryModel\ManagerQuery.cs" />
+    <Compile Include="BaoZhong.IServices.QueryModel\QueryBase.cs" />
     <Compile Include="BaoZhong.IServices\CacheKeyCollection.cs" />
+    <Compile Include="BaoZhong.IServices\IGroupService.cs" />
+    <Compile Include="BaoZhong.IServices\IManagerService.cs" />
+    <Compile Include="BaoZhong.IServices\IPrivilegesService.cs" />
     <Compile Include="BaoZhong.IServices\IService.cs" />
     <Compile Include="BaoZhong.IServices\ISiteSettingService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BaoZhong.IServices.QueryModel\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\BaoZhong.Model\BaoZhong.Model.csproj">
       <Project>{29753f37-3b43-4eec-9110-f0a3238c3b58}</Project>

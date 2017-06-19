@@ -47,10 +47,16 @@
     <Compile Include="BaoZhong.Model\BaseModel.cs" />
     <Compile Include="BaoZhong.Model\Controllers.cs" />
     <Compile Include="BaoZhong.Model\GroupActionItem.cs" />
+    <Compile Include="BaoZhong.Model\GroupInfo.cs" />
     <Compile Include="BaoZhong.Model\IManager.cs" />
     <Compile Include="BaoZhong.Model\IPaltManager.cs" />
+    <Compile Include="BaoZhong.Model\ISellerManager.cs" />
+    <Compile Include="BaoZhong.Model\ManagerInfo.cs" />
+    <Compile Include="BaoZhong.Model\PageModel.cs" />
     <Compile Include="BaoZhong.Model\PrivilegeAttribute.cs" />
     <Compile Include="BaoZhong.Model\Privileges.cs" />
+    <Compile Include="BaoZhong.Model\RoleInfo.cs" />
+    <Compile Include="BaoZhong.Model\RolePrivilegeInfo.cs" />
     <Compile Include="BaoZhong.Model\SellerPrivilege.cs" />
     <Compile Include="BaoZhong.Model\SiteSettingsInfo.cs" />
     <Compile Include="BaoZhong.Model\UserPrivilege.cs" />

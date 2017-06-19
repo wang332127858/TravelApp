@@ -1,3 +1,4 @@
+using BaoZhong.Model;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 
@@ -13,6 +14,29 @@ namespace BaoZhong.Entity
         /// <summary>
         /// 以下集合排序按照首字母为从A-Z
         /// </summary>
+
+        public virtual DbSet<ManagerInfo> ManagerInfo
+        {
+            get;
+            set;
+        }
+
+        public virtual DbSet<RolePrivilegeInfo> RolePrivilegeInfo
+        {
+            get;
+            set;
+        }
+
+        public virtual DbSet<RoleInfo> RoleInfo
+        {
+            get;
+            set;
+        }
+        public virtual DbSet<GroupInfo> GroupInfo
+        {
+            get;
+            set;
+        }
 
         public Entities() : base("name=Entities")
 		{
