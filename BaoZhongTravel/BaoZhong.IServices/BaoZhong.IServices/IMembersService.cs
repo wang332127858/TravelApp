@@ -9,9 +9,9 @@ namespace BaoZhong.IServices
     {
         PageModel<MemberInfo> GetMembers(MemberQuery query);
 
-        MemberInfo GetMember(long userId);
+        MemberInfo GetMember(string userId);
 
-        void UpdateMemberLevel(long userId,long level);
+        void UpdateMemberLevel(string userId,long level);
 
         void DeleteMember(long id);
     }

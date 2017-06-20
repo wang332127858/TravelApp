@@ -9,7 +9,7 @@ namespace BaoZhong.IServices
     {
         PageModel<SupplierInfo> GetSuppliers(SupplierQuery query);
 
-        SupplierInfo GetSupplier(long userId);
+        SupplierInfo GetSupplier(string userId);
 
         //void UpdateMemberLevel(long userId, long level);
 
