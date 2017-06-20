@@ -42,13 +42,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaoZhong.IServices.QueryModel\ManagerQuery.cs" />
+    <Compile Include="BaoZhong.IServices.QueryModel\MemberQuery.cs" />
     <Compile Include="BaoZhong.IServices.QueryModel\QueryBase.cs" />
+    <Compile Include="BaoZhong.IServices.QueryModel\SupplierQuery.cs" />
     <Compile Include="BaoZhong.IServices\CacheKeyCollection.cs" />
     <Compile Include="BaoZhong.IServices\IGroupService.cs" />
+    <Compile Include="BaoZhong.IServices\ILevelRuleService.cs" />
     <Compile Include="BaoZhong.IServices\IManagerService.cs" />
+    <Compile Include="BaoZhong.IServices\IMembersService.cs" />
     <Compile Include="BaoZhong.IServices\IPrivilegesService.cs" />
     <Compile Include="BaoZhong.IServices\IService.cs" />
     <Compile Include="BaoZhong.IServices\ISiteSettingService.cs" />
+    <Compile Include="BaoZhong.IServices\ISupplierService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
