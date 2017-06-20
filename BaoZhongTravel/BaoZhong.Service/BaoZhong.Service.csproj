@@ -46,9 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaoZhong.Service\LevelRuleService.cs" />
     <Compile Include="BaoZhong.Service\ManagerService.cs" />
+    <Compile Include="BaoZhong.Service\MembersService.cs" />
     <Compile Include="BaoZhong.Service\PrivilegesService.cs" />
     <Compile Include="BaoZhong.Service\ServiceBase.cs" />
+    <Compile Include="BaoZhong.Service\SupplierService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
