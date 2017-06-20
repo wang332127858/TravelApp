@@ -44,17 +44,17 @@ namespace BaoZhong.Entity
             set;
         }
 
-        //public virtual DbSet<LevelRuleInfo> LevelRuleInfo
-        //{
-        //    get;
-        //    set;
-        //}
+        public virtual DbSet<LevelRuleInfo> LevelRuleInfo
+        {
+            get;
+            set;
+        }
 
-        //public virtual DbSet<SupplierInfo> SupplierInfo
-        //{
-        //    get;
-        //    set;
-        //}
+        public virtual DbSet<SupplierInfo> SupplierInfo
+        {
+            get;
+            set;
+        }
 
         public Entities() : base("name=Entities")
 		{
