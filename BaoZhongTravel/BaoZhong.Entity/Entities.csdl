@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="BZ.Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+<Schema Namespace="BaoZhong.Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="BZ_Managers" EntityType="BZ.Model.ManagerInfo" />
-    <EntitySet Name="BZ_RolePrivileges" EntityType="BZ.Model.RolePrivilegeInfo" />
-    <EntitySet Name="BZ_Roles" EntityType="BZ.Model.RoleInfo" />
-    <EntitySet Name="BZ_Members" EntityType="BZ.Model.MemberInfo" />
-    <EntitySet Name="BZ_LevelRule" EntityType="BZ.Model.LevelRuleInfo" />
-    <EntitySet Name="BZ_Supplier" EntityType="BZ.Model.SupplierInfo" />
+    <EntitySet Name="BZ_Managers" EntityType="BaoZhong.Model.ManagerInfo" />
+    <EntitySet Name="BZ_RolePrivileges" EntityType="BaoZhong.Model.RolePrivilegeInfo" />
+    <EntitySet Name="BZ_Roles" EntityType="BaoZhong.Model.RoleInfo" />
+    <EntitySet Name="BZ_Members" EntityType="BaoZhong.Model.MemberInfo" />
+    <EntitySet Name="BZ_LevelRule" EntityType="BaoZhong.Model.LevelRuleInfo" />
+    <EntitySet Name="BZ_Supplier" EntityType="BaoZhong.Model.SupplierInfo" />
   </EntityContainer>
   <EnumType Name="EnumCommentKey" a:ExternalTypeName="StatisticOrderCommentsInfo.EnumCommentKey" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" />
   <EnumType Name="CompanyEmployeeCount" a:ExternalTypeName="CompanyEmployeeCount" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" />

@@ -51,6 +51,7 @@
     <Compile Include="BaoZhong.Model\IManager.cs" />
     <Compile Include="BaoZhong.Model\IPaltManager.cs" />
     <Compile Include="BaoZhong.Model\ISellerManager.cs" />
+    <Compile Include="BaoZhong.Model\LevelRuleInfo.cs" />
     <Compile Include="BaoZhong.Model\ManagerInfo.cs" />
     <Compile Include="BaoZhong.Model\MemberInfo.cs" />
     <Compile Include="BaoZhong.Model\PageModel.cs" />
@@ -60,6 +61,7 @@
     <Compile Include="BaoZhong.Model\RolePrivilegeInfo.cs" />
     <Compile Include="BaoZhong.Model\SellerPrivilege.cs" />
     <Compile Include="BaoZhong.Model\SiteSettingsInfo.cs" />
+    <Compile Include="BaoZhong.Model\SupplierInfo.cs" />
     <Compile Include="BaoZhong.Model\UserPrivilege.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

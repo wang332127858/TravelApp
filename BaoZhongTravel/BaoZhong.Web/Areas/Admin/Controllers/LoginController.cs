@@ -21,10 +21,11 @@ namespace BaoZhong.Web.Areas.Admin.Controllers
     {
         private const int TIMES_WITHOUT_CHECKCODE = 3;
 
+        private IManagerService _iManagerService;
 
-        public LoginController()
+        public LoginController(IManagerService iManagerService)
         {
-            
+            this._iManagerService = iManagerService;
         }
 
         private void CheckCheckCode(string username, string checkCode)
@@ -121,19 +122,19 @@ namespace BaoZhong.Web.Areas.Admin.Controllers
             {
                 this.CheckInput(username, password);
                 this.CheckCheckCode(username, checkCode);
-                //ManagerInfo man = this._iManagerService.GetPlatformManagerByName(username);
-                //if (man == null)
-                //{
-                //    throw new BaoZhongException("该用户不存在!");
-                //}
-                //ManagerInfo managerInfo = this._iManagerService.Login(username, password, true);
-                //if (managerInfo == null)
-                //{
-                //    throw new BaoZhongException("用户名和密码不匹配");
-                //}
+                ManagerInfo man = this._iManagerService.GetPlatformManagerByName(username);
+                if (man == null)
+                {
+                    throw new BaoZhongException("该用户不存在!");
+                }
+                ManagerInfo managerInfo = this._iManagerService.Login(username, password, true);
+                if (managerInfo == null)
+                {
+                    throw new BaoZhongException("用户名和密码不匹配");
+                }
 
                 this.ClearErrorTimes(username);
-                jsonResult = base.Json(new { success = true, userId = UserCookieEncryptHelper.Encrypt(/*managerInfo.Id*/1, "Admin") });
+                jsonResult = base.Json(new { success = true, userId = UserCookieEncryptHelper.Encrypt(managerInfo.Id, "Admin") });
             }
             catch (BaoZhongException BaoZhongException1)
             {

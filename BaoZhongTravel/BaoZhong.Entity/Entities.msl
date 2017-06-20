@@ -2,7 +2,7 @@
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="BZModelStoreContainer" CdmEntityContainer="Entities">
     <EntitySetMapping Name="BZ_Managers">
-      <EntityTypeMapping TypeName="BZ.Model.ManagerInfo">
+      <EntityTypeMapping TypeName="BaoZhong.Model.ManagerInfo">
         <MappingFragment StoreEntitySet="BZ_Managers">
           <ScalarProperty Name="BankAccountNumber" ColumnName="BankAccountNumber" />
           <ScalarProperty Name="BankAccountName" ColumnName="BankAccountName" />
@@ -25,7 +25,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="BZ_RolePrivileges">
-      <EntityTypeMapping TypeName="BZ.Model.RolePrivilegeInfo">
+      <EntityTypeMapping TypeName="BaoZhong.Model.RolePrivilegeInfo">
         <MappingFragment StoreEntitySet="BZ_RolePrivileges">
           <ScalarProperty Name="RoleId" ColumnName="RoleId" />
           <ScalarProperty Name="Privilege" ColumnName="Privilege" />
@@ -34,7 +34,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="BZ_Roles">
-      <EntityTypeMapping TypeName="BZ.Model.RoleInfo">
+      <EntityTypeMapping TypeName="BaoZhong.Model.RoleInfo">
         <MappingFragment StoreEntitySet="BZ_Roles">
           <ScalarProperty Name="Description" ColumnName="Description" />
           <ScalarProperty Name="RoleName" ColumnName="RoleName" />
@@ -44,7 +44,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="BZ_Members">
-      <EntityTypeMapping TypeName="BZ.Model.MemberInfo">
+      <EntityTypeMapping TypeName="BaoZhong.Model.MemberInfo">
         <MappingFragment StoreEntitySet="BZ_Members">
           <ScalarProperty Name="InterestLine" ColumnName="InterestLine" />
           <ScalarProperty Name="Profession" ColumnName="Profession" />
@@ -74,7 +74,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="BZ_LevelRule">
-      <EntityTypeMapping TypeName="BZ.Model.LevelRuleInfo">
+      <EntityTypeMapping TypeName="BaoZhong.Model.LevelRuleInfo">
         <MappingFragment StoreEntitySet="BZ_LevelRule">
           <ScalarProperty Name="EndPoint" ColumnName="EndPoint" />
           <ScalarProperty Name="BeginPoint" ColumnName="BeginPoint" />
@@ -84,7 +84,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="BZ_Supplier">
-      <EntityTypeMapping TypeName="BZ.Model.SupplierInfo">
+      <EntityTypeMapping TypeName="BaoZhong.Model.SupplierInfo">
         <MappingFragment StoreEntitySet="BZ_Supplier">
           <ScalarProperty Name="RegionName" ColumnName="RecommendUserName" />
           <ScalarProperty Name="RegionId" ColumnName="RecommendUserId" />
