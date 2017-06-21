@@ -32,11 +32,6 @@ namespace BaoZhong.Entity
             get;
             set;
         }
-        public virtual DbSet<GroupInfo> GroupInfo
-        {
-            get;
-            set;
-        }
 
         public virtual DbSet<MemberInfo> MemberInfo
         {
