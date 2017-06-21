@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BaoZhong.Model
 {
-	public class ManagerInfo : BaseModel, ISellerManager, IPaltManager, IManager
+	public class ManagerInfo : BaseModel
 	{
 		private long _id;
 
@@ -20,12 +20,6 @@ namespace BaoZhong.Model
 				base.Id = value;
 			}
 		}
-
-        public long RecommendId
-        {
-            get;
-            set;
-        }
 
         public long ShopId
 		{
@@ -119,33 +113,5 @@ namespace BaoZhong.Model
             get;
             set;
         }
-
-        [NotMapped]
-		public string RoleName
-		{
-			get;
-			set;
-		}
-
-		[NotMapped]
-		public List<AdminPrivilege> AdminPrivileges
-		{
-			get;
-			set;
-		}
-
-		[NotMapped]
-		public List<SellerPrivilege> SellerPrivileges
-		{
-			get;
-			set;
-		}
-
-        [NotMapped]
-		public string Description
-		{
-			get;
-			set;
-		}
 	}
 }

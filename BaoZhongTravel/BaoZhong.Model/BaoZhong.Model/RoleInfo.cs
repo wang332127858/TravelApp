@@ -39,15 +39,5 @@ namespace BaoZhong.Model
             set;
         }
 
-        public virtual ICollection<RolePrivilegeInfo> RolePrivilegeInfo
-        {
-            get;
-            set;
-        }
-
-        public RoleInfo()
-        {
-            this.RolePrivilegeInfo = new HashSet<RolePrivilegeInfo>();
-        }
     }
 }

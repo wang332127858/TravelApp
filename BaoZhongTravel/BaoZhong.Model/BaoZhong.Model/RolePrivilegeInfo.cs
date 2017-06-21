@@ -35,11 +35,5 @@ namespace BaoZhong.Model
 			get;
 			set;
 		}
-
-		public virtual RoleInfo RoleInfo
-		{
-			get;
-			set;
-		}
 	}
 }
