@@ -113,5 +113,26 @@ namespace BaoZhong.Model
             get;
             set;
         }
-	}
+
+        [NotMapped]
+        public string RoleName
+        {
+            get;
+            set;
+        }
+
+        [NotMapped]
+        public List<AdminPrivilege> AdminPrivileges
+        {
+            get;
+            set;
+        }
+
+        [NotMapped]
+        public string Description
+        {
+            get;
+            set;
+        }
+    }
 }
