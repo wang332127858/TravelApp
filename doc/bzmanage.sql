@@ -38,11 +38,10 @@ CREATE TABLE `bz_managers` (
   `Phone` varchar(100) DEFAULT NULL COMMENT '电话',
   `BankAccountName` varchar(100) DEFAULT NULL COMMENT '银行开户行',
   `BankAccountNumber` varchar(100) DEFAULT NULL COMMENT '个人银行账号',
-  `RegionId` int(20) DEFAULT '0',
   PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2252 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
-insert  into `bz_managers`(`Id`,`ShopId`,`RoleId`,`GroupId`,`ParentId`,`ParentName`,`UserName`,`Password`,`PasswordSalt`,`CreateDate`,`Remark`,`RealName`,`IsLogin`,`Address`,`Phone`,`BankAccountName`,`BankAccountNumber`,`RegionId`) values (309,0,0,0,0,'','admin','e35eb25004f0807b0c56399ec0d6eafe','0039faa2-ff8e-40c1-b1e3-a21373f9d89a','2016-12-01 11:09:55',NULL,NULL,1,NULL,NULL,NULL,NULL,0);
+insert  into `bz_managers`(`Id`,`ShopId`,`RoleId`,`GroupId`,`ParentId`,`ParentName`,`UserName`,`Password`,`PasswordSalt`,`CreateDate`,`Remark`,`RealName`,`IsLogin`,`Address`,`Phone`,`BankAccountName`,`BankAccountNumber`) values (309,0,0,0,0,'','admin','e35eb25004f0807b0c56399ec0d6eafe','0039faa2-ff8e-40c1-b1e3-a21373f9d89a','2016-12-01 11:09:55',NULL,NULL,1,NULL,NULL,NULL,NULL);
 
 
 /*Table structure for table `bz_roles` */
