@@ -66,7 +66,7 @@ namespace BaoZhong.Service
 
 		public IQueryable<RoleInfo> GetPlatformRoles()
 		{
-			return this.context.RoleInfo.FindAll();
+			return this.context.RoleInfo.AsQueryable();
 		}
 
 	}
