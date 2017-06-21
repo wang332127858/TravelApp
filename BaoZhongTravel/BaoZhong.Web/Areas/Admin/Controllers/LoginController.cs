@@ -127,7 +127,7 @@ namespace BaoZhong.Web.Areas.Admin.Controllers
                 {
                     throw new BaoZhongException("该用户不存在!");
                 }
-                ManagerInfo managerInfo = this._iManagerService.Login(username, password, true);
+                ManagerInfo managerInfo = this._iManagerService.Login(username, password);
                 if (managerInfo == null)
                 {
                     throw new BaoZhongException("用户名和密码不匹配");
